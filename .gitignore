@@ -1,0 +1,4 @@
+.vagrant/
+.vscode/
+extract_files
+pcap

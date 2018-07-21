@@ -1,0 +1,31 @@
+version: '3.4'
+
+volumes:
+  json-data: # suricata json input
+  rules-data: # scirius rules
+
+services:
+
+  suricata:
+    image: tatsui/suricata
+    build: ./suricata
+    network_mode: "host"
+    cap_add:
+     - NET_ADMIN
+     - SYS_NICE
+     - NET_RAW
+    volumes:
+      - ./pcap:/pcap
+      - ./suricata/config/suricata.yaml:/etc/suricata/suricata.yaml:ro
+      - ./suricata/rules/suricata.rules:/etc/suricata/rules/suricata.rules:ro
+      - json-data:/var/log/suricata/
+      - rules-data:/etc/suricata/rules/
+    command: bash -c "suricata -c /etc/suricata/suricata.yaml -i enp0s25"
+    #command: bash -c "suricata -c /etc/suricata/suricata.yaml -r /pcap/
+
+  yara-gen:
+    image: tatsui/yara-gen
+    build: yara-gen
+    volumes:
+       - ./extract_files:/malware
+
