@@ -47,7 +47,7 @@ services:
     # build: manager
     volumes:
       - ./oneshot/kibana-dashboards:/kibana-dashboards
-    depends_on: [ 'elasticsearch' , 'kibana' ,'kafka']
+    depends_on: [ 'elasticsearch' , 'kibana' ,'kafka', 'logstash']
     networks: ['backend']
     command: bash -c "/entrypoint-import.sh"
     #command: bash -c "/entrypoint-export.sh"

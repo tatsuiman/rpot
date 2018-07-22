@@ -29,7 +29,7 @@ services:
     # build: manager
     volumes:
       - ./manager/kibana-dashboards:/kibana-dashboards
-    depends_on: [ 'elasticsearch' , 'kibana' ,'kafka']
+    depends_on: [ 'elasticsearch' , 'kibana' ,'kafka', 'logstash']
     networks: ['backend']
     command: bash -c "/entrypoint-import.sh"
     #command: bash -c "/entrypoint-export.sh"
@@ -51,7 +51,7 @@ services:
 
   logstash:
     image: tatsui/logstash-kafka-bro
-    # build: logstash
+    #build: logstash
     volumes:
       - ./logstash/pipeline/logstash-bro.conf:/usr/share/logstash/pipeline/logstash.conf # client -> server 
       #- ./logstash/pipeline/logstash-bro-quick.conf:/usr/share/logstash/pipeline/logstash.conf # client -> server (blacklist)
@@ -59,8 +59,8 @@ services:
       #- ./logstash/pipeline/logstash-bro-honeypot-quick.conf:/usr/share/logstash/pipeline/logstash.conf # server -> client (blacklist)
     depends_on: [ 'elasticsearch' ,'kafka']
     environment:
-      LOG_LEVEL: fatal
-      ES_JAVA_OPTS: '-Xms2G -Xmx2G'
+      LOG_LEVEL: error
+      ES_JAVA_OPTS: '-Xms4G -Xmx4G'
     networks: ['backend']
 
   kibana:
