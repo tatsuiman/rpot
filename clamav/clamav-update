@@ -1,0 +1,5 @@
+#!/bin/bash
+cd /usr/local/share/clamav
+wget http://database.clamav.net/main.cvd -O main.cvd
+wget http://database.clamav.net/daily.cvd -O daily.cvd
+wget http://database.clamav.net/bytecode.cvd -O bytecode.cvd
