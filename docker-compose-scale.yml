@@ -31,7 +31,7 @@ services:
 
   bro:
     image: tatsui/bro
-    # build: ./bro
+    build: ./bro
     environment:
        MODE: "quick"
        #MODE: "standard"
@@ -44,7 +44,7 @@ services:
 
   manager:
     image: tatsui/rpot-manager
-    # build: manager
+    build: manager
     volumes:
       - ./oneshot/kibana-dashboards:/kibana-dashboards
     depends_on: [ 'elasticsearch' , 'kibana' ,'kafka', 'logstash']
@@ -69,7 +69,7 @@ services:
 
   logstash:
     image: tatsui/logstash-kafka-bro
-    # build: logstash
+    build: logstash
     volumes:
       - ./logstash/pipeline/logstash-bro.conf:/usr/share/logstash/pipeline/logstash.conf # client -> server 
       #- ./logstash/pipeline/logstash-bro-quick.conf:/usr/share/logstash/pipeline/logstash.conf # client -> server (blacklist)
@@ -78,8 +78,8 @@ services:
 
     depends_on: [ 'elasticsearch' ,'kafka']
     environment:
-      LOG_LEVEL: fatal
-      ES_JAVA_OPTS: '-Xms2G -Xmx2G'
+      LOG_LEVEL: error
+      ES_JAVA_OPTS: '-Xms4G -Xmx4G'
     networks: ['backend']
 
   kibana:

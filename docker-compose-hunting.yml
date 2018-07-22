@@ -20,8 +20,7 @@ services:
       - ./suricata/rules/suricata.rules:/etc/suricata/rules/suricata.rules:ro
       - json-data:/var/log/suricata/
       - rules-data:/etc/suricata/rules/
-    command: bash -c "suricata -c /etc/suricata/suricata.yaml -i enp0s25"
-    #command: bash -c "suricata -c /etc/suricata/suricata.yaml -r /pcap/
+    #command: bash -c "suricata -c /etc/suricata/suricata.yaml -i enp0s25"
 
   yara-gen:
     image: tatsui/yara-gen

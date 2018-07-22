@@ -9,7 +9,7 @@
 $ echo 'vm.max_map_count = 262144' | sudo tee -a /etc/sysctl.conf
 $ sudo sysctl -p
 $ cd rpot
-$ docker-compose up manager
+$ docker-compose pull
 ```
 
 ## Analysis pcap files
@@ -18,7 +18,13 @@ $ docker-compose up manager
 $ cp /path/to/pcap/*.pcap ./pcap/
 ```
 
-### step 2 run docker 
+### step 2 cleanup
+```
+$ docker-compose down -v
+$ docker-compose up manager
+```
+
+### step 3 run docker 
 ```
 $ docker-compose up bro
 ```
