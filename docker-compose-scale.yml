@@ -34,6 +34,7 @@ services:
     # build: ./bro
     environment:
        MODE: "quick"
+       #MODE: "standard"
     volumes:
       - ./pcap:/pcap
       - ./extract_files/:/extract_files/
@@ -70,14 +71,14 @@ services:
     image: tatsui/logstash-kafka-bro
     # build: logstash
     volumes:
-        #- ./logstash/pipeline/logstash-bro.conf:/usr/share/logstash/pipeline/logstash-bro.conf
-        #- ./logstash/pipeline/logstash-bro.conf:/usr/share/logstash/pipeline/logstash-bro-honeypot.conf
-        #- ./logstash/pipeline/logstash-bro.conf:/usr/share/logstash/pipeline/logstash-bro-honeypot-quick.conf
-      - ./logstash/pipeline/logstash-bro-quick.conf:/usr/share/logstash/pipeline/logstash-bro-quick.conf
+      - ./logstash/pipeline/logstash-bro.conf:/usr/share/logstash/pipeline/logstash.conf # client -> server 
+      #- ./logstash/pipeline/logstash-bro-quick.conf:/usr/share/logstash/pipeline/logstash.conf # client -> server (blacklist)
+      #- ./logstash/pipeline/logstash-bro-honeypot.conf:/usr/share/logstash/pipeline/logstash.conf # server -> client
+      #- ./logstash/pipeline/logstash-bro-honeypot-quick.conf:/usr/share/logstash/pipeline/logstash.conf # server -> client (blacklist)
 
     depends_on: [ 'elasticsearch' ,'kafka']
     environment:
-      LOG_LEVEL:    error
+      LOG_LEVEL: fatal
       ES_JAVA_OPTS: '-Xms2G -Xmx2G'
     networks: ['backend']
 
