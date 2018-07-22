@@ -1,6 +1,6 @@
 module SENSOR;
 export {
-  const sensor_id = "2016-12-13-domaincop247.com-malspam-traffic.pcap" &redef;
+  const sensor_id = "2017-10-19-Necurs-Botnet-malspam-pushing-Locky.pcap" &redef;
 }
 @load frameworks/files/hash-all-files
 
