@@ -28,3 +28,10 @@ services:
     volumes:
        - ./extract_files:/malware
 
+  yara:
+    image: tatsui/yara
+    build: yara
+    volumes:
+       - ./extract_files:/malware
+       - ./yara/rules:/rules
+
