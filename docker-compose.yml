@@ -15,8 +15,8 @@ services:
     image: tatsui/bro
     build: ./bro
     environment:
-       MODE: "quick"
-       #MODE: "standard"
+       #MODE: "quick"
+       MODE: "standard"
     volumes:
       - ./pcap:/pcap
       - ./extract_files/:/extract_files/
