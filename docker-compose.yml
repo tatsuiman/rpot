@@ -13,7 +13,7 @@ services:
 
   bro:
     image: tatsui/bro
-    build: ./bro
+    # build: ./bro
     environment:
        MODE: "quick"
     volumes:
@@ -25,7 +25,7 @@ services:
 
   manager:
     image: tatsui/rpot-manager
-    build: manager
+    # build: manager
     volumes:
       - ./manager/kibana-dashboards:/kibana-dashboards
     depends_on: [ 'elasticsearch' , 'kibana' ,'kafka']
@@ -50,7 +50,7 @@ services:
 
   logstash:
     image: tatsui/logstash-kafka-bro
-    build: logstash
+    # build: logstash
     volumes:
         #- ./logstash/pipeline/logstash-bro.conf:/usr/share/logstash/pipeline/logstash-bro.conf
         #- ./logstash/pipeline/logstash-bro.conf:/usr/share/logstash/pipeline/logstash-bro-honeypot.conf
