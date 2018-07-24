@@ -1,7 +1,7 @@
 # Real-time Packet Observation Tool (RPOT)
 
 ## architecture
-![architecture](https://github.com/tatsu-i/rpot/raw/master/screenshot/architecture.png "architecture")
+![architecture](https://github.com/super-a1ice/rpot/doc/raw/master/screenshot/architecture.png "architecture")
 
 
 ## Startup
@@ -86,10 +86,10 @@ $ docker-compose up bro
 Access Kibana url (``http://localhost:5601``)
 Click [Dashboard] -> [Open] -> [MAIN]
 
-![screenshot0](https://github.com/tatsu-i/rpot/raw/master/screenshot/screenshot0.png "overview")
-![screenshot1](https://github.com/tatsu-i/rpot/raw/master/screenshot/screenshot1.png "HTTP")
-![screenshot2](https://github.com/tatsu-i/rpot/raw/master/screenshot/screenshot2.png "Intelligence")
-![screenshot3](https://github.com/tatsu-i/rpot/raw/master/screenshot/screenshot3.png "Connection")
-![screenshot5](https://github.com/tatsu-i/rpot/raw/master/screenshot/screenshot5.png "Files")
-![screenshot6](https://github.com/tatsu-i/rpot/raw/master/screenshot/screenshot6.png "Suricata")
-![screenshot7](https://github.com/tatsu-i/rpot/raw/master/screenshot/screenshot7.png "SSL")
+![screenshot0](https://github.com/super-a1ice/rpot/doc/raw/master/screenshot/screenshot0.png "overview")
+![screenshot1](https://github.com/super-a1ice/rpot/doc/raw/master/screenshot/screenshot1.png "HTTP")
+![screenshot2](https://github.com/super-a1ice/rpot/doc/raw/master/screenshot/screenshot2.png "Intelligence")
+![screenshot3](https://github.com/super-a1ice/rpot/doc/raw/master/screenshot/screenshot3.png "Connection")
+![screenshot5](https://github.com/super-a1ice/rpot/doc/raw/master/screenshot/screenshot5.png "Files")
+![screenshot6](https://github.com/super-a1ice/rpot/doc/raw/master/screenshot/screenshot6.png "Suricata")
+![screenshot7](https://github.com/super-a1ice/rpot/doc/raw/master/screenshot/screenshot7.png "SSL")
