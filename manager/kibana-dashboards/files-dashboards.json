@@ -159,6 +159,38 @@
       }
     },
     {
+      "id": "eb5a8e50-901a-11e8-b8d6-e73eae5963f1",
+      "type": "visualization",
+      "updated_at": "2018-07-25T14:56:32.693Z",
+      "version": 1,
+      "attributes": {
+        "title": "Source Organization",
+        "visState": "{\"title\":\"Source Organization\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"@meta.geoip_orig.as_org.keyword\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":100,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
+        "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+        "description": "",
+        "version": 1,
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": "{\"index\":\"e7697850-25fe-11e8-917c-bbb0e17070d1\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+        }
+      }
+    },
+    {
+      "id": "fb1b2610-901a-11e8-b8d6-e73eae5963f1",
+      "type": "visualization",
+      "updated_at": "2018-07-25T14:56:59.121Z",
+      "version": 1,
+      "attributes": {
+        "title": "Destination Organization",
+        "visState": "{\"title\":\"Destination Organization\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"@meta.geoip_resp.as_org.keyword\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":100,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
+        "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+        "description": "",
+        "version": 1,
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": "{\"index\":\"e7697850-25fe-11e8-917c-bbb0e17070d1\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+        }
+      }
+    },
+    {
       "id": "e7697850-25fe-11e8-917c-bbb0e17070d1",
       "type": "index-pattern",
       "updated_at": "2018-07-25T13:04:51.988Z",
@@ -172,13 +204,13 @@
     {
       "id": "b7ea9610-26c4-11e8-917c-bbb0e17070d1",
       "type": "dashboard",
-      "updated_at": "2018-07-25T13:01:50.906Z",
-      "version": 3,
+      "updated_at": "2018-07-25T15:00:24.399Z",
+      "version": 4,
       "attributes": {
         "title": "FILES",
         "hits": 0,
         "description": "",
-        "panelsJSON": "[{\"panelIndex\":\"1\",\"gridData\":{\"x\":13,\"y\":0,\"w\":13,\"h\":18,\"i\":\"1\"},\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"id\":\"file-mime-types\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"panelIndex\":\"2\",\"gridData\":{\"x\":13,\"y\":18,\"w\":13,\"h\":18,\"i\":\"2\"},\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"id\":\"file-source\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"panelIndex\":\"3\",\"gridData\":{\"x\":0,\"y\":36,\"w\":48,\"h\":25,\"i\":\"3\"},\"columns\":[\"files.md5\",\"files.extracted\",\"files.source\",\"files.tx_hosts\",\"files.rx_hosts\",\"files.mime_type\"],\"id\":\"files\",\"sort\":[\"@timestamp\",\"desc\"],\"type\":\"search\",\"version\":\"6.3.0\"},{\"panelIndex\":\"4\",\"gridData\":{\"x\":26,\"y\":0,\"w\":22,\"h\":18,\"i\":\"4\"},\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"id\":\"meta_system\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"panelIndex\":\"5\",\"gridData\":{\"x\":0,\"y\":0,\"w\":13,\"h\":18,\"i\":\"5\"},\"id\":\"bcb48270-2aaf-11e8-8249-cb755c34d5e4\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"panelIndex\":\"7\",\"gridData\":{\"x\":0,\"y\":61,\"w\":24,\"h\":15,\"i\":\"7\"},\"embeddableConfig\":{},\"id\":\"meta_orig_ip\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"panelIndex\":\"8\",\"gridData\":{\"x\":24,\"y\":61,\"w\":24,\"h\":15,\"i\":\"8\"},\"embeddableConfig\":{},\"id\":\"meta_resp_ip\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"panelIndex\":\"9\",\"gridData\":{\"x\":26,\"y\":18,\"w\":22,\"h\":18,\"i\":\"9\"},\"version\":\"6.3.0\",\"type\":\"visualization\",\"id\":\"e38f8cf0-7df7-11e8-83e2-21c593b1bbda\",\"embeddableConfig\":{}},{\"panelIndex\":\"10\",\"gridData\":{\"x\":0,\"y\":18,\"w\":13,\"h\":18,\"i\":\"10\"},\"version\":\"6.3.0\",\"type\":\"visualization\",\"id\":\"bc6ad1f0-900a-11e8-b8d6-e73eae5963f1\",\"embeddableConfig\":{}}]",
+        "panelsJSON": "[{\"panelIndex\":\"1\",\"gridData\":{\"x\":13,\"y\":0,\"w\":13,\"h\":18,\"i\":\"1\"},\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"id\":\"file-mime-types\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"panelIndex\":\"2\",\"gridData\":{\"x\":13,\"y\":18,\"w\":13,\"h\":18,\"i\":\"2\"},\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"id\":\"file-source\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"panelIndex\":\"3\",\"gridData\":{\"x\":0,\"y\":36,\"w\":48,\"h\":25,\"i\":\"3\"},\"columns\":[\"files.md5\",\"files.extracted\",\"files.source\",\"files.tx_hosts\",\"files.rx_hosts\",\"files.mime_type\"],\"id\":\"files\",\"sort\":[\"@timestamp\",\"desc\"],\"type\":\"search\",\"version\":\"6.3.0\"},{\"panelIndex\":\"4\",\"gridData\":{\"x\":26,\"y\":0,\"w\":22,\"h\":18,\"i\":\"4\"},\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"id\":\"meta_system\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"panelIndex\":\"5\",\"gridData\":{\"x\":0,\"y\":0,\"w\":13,\"h\":18,\"i\":\"5\"},\"id\":\"bcb48270-2aaf-11e8-8249-cb755c34d5e4\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"panelIndex\":\"7\",\"gridData\":{\"x\":0,\"y\":61,\"w\":24,\"h\":15,\"i\":\"7\"},\"embeddableConfig\":{},\"id\":\"meta_orig_ip\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"panelIndex\":\"8\",\"gridData\":{\"x\":24,\"y\":61,\"w\":24,\"h\":15,\"i\":\"8\"},\"embeddableConfig\":{},\"id\":\"meta_resp_ip\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"panelIndex\":\"9\",\"gridData\":{\"x\":26,\"y\":18,\"w\":22,\"h\":18,\"i\":\"9\"},\"version\":\"6.3.0\",\"type\":\"visualization\",\"id\":\"e38f8cf0-7df7-11e8-83e2-21c593b1bbda\",\"embeddableConfig\":{}},{\"panelIndex\":\"10\",\"gridData\":{\"x\":0,\"y\":18,\"w\":13,\"h\":18,\"i\":\"10\"},\"version\":\"6.3.0\",\"type\":\"visualization\",\"id\":\"bc6ad1f0-900a-11e8-b8d6-e73eae5963f1\",\"embeddableConfig\":{}},{\"panelIndex\":\"11\",\"gridData\":{\"x\":0,\"y\":76,\"w\":24,\"h\":15,\"i\":\"11\"},\"version\":\"6.3.0\",\"type\":\"visualization\",\"id\":\"eb5a8e50-901a-11e8-b8d6-e73eae5963f1\",\"embeddableConfig\":{}},{\"gridData\":{\"w\":24,\"h\":15,\"x\":24,\"y\":76,\"i\":\"12\"},\"version\":\"6.3.0\",\"panelIndex\":\"12\",\"type\":\"visualization\",\"id\":\"fb1b2610-901a-11e8-b8d6-e73eae5963f1\",\"embeddableConfig\":{}}]",
         "optionsJSON": "{\"darkTheme\":false,\"useMargins\":false}",
         "version": 1,
         "timeRestore": false,

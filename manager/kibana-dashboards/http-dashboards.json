@@ -263,6 +263,38 @@
       }
     },
     {
+      "id": "eb5a8e50-901a-11e8-b8d6-e73eae5963f1",
+      "type": "visualization",
+      "updated_at": "2018-07-25T14:56:32.693Z",
+      "version": 1,
+      "attributes": {
+        "title": "Source Organization",
+        "visState": "{\"title\":\"Source Organization\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"@meta.geoip_orig.as_org.keyword\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":100,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
+        "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+        "description": "",
+        "version": 1,
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": "{\"index\":\"e7697850-25fe-11e8-917c-bbb0e17070d1\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+        }
+      }
+    },
+    {
+      "id": "fb1b2610-901a-11e8-b8d6-e73eae5963f1",
+      "type": "visualization",
+      "updated_at": "2018-07-25T14:56:59.121Z",
+      "version": 1,
+      "attributes": {
+        "title": "Destination Organization",
+        "visState": "{\"title\":\"Destination Organization\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"@meta.geoip_resp.as_org.keyword\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":100,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
+        "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+        "description": "",
+        "version": 1,
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": "{\"index\":\"e7697850-25fe-11e8-917c-bbb0e17070d1\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+        }
+      }
+    },
+    {
       "id": "e7697850-25fe-11e8-917c-bbb0e17070d1",
       "type": "index-pattern",
       "updated_at": "2018-07-25T13:04:51.988Z",
@@ -276,13 +308,13 @@
     {
       "id": "ca38dd90-26c4-11e8-917c-bbb0e17070d1",
       "type": "dashboard",
-      "updated_at": "2018-07-25T12:50:25.296Z",
-      "version": 1,
+      "updated_at": "2018-07-25T14:57:26.759Z",
+      "version": 2,
       "attributes": {
         "title": "HTTP",
         "hits": 0,
         "description": "",
-        "panelsJSON": "[{\"panelIndex\":\"1\",\"gridData\":{\"x\":24,\"y\":30,\"w\":12,\"h\":15,\"i\":\"1\"},\"id\":\"http-method\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"panelIndex\":\"2\",\"gridData\":{\"x\":0,\"y\":43,\"w\":24,\"h\":24,\"i\":\"2\"},\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"id\":\"http-top-host-headers\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"panelIndex\":\"3\",\"gridData\":{\"x\":0,\"y\":97,\"w\":24,\"h\":25,\"i\":\"3\"},\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"id\":\"http-top-uri\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"panelIndex\":\"4\",\"gridData\":{\"x\":24,\"y\":45,\"w\":24,\"h\":20,\"i\":\"4\"},\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"id\":\"http-top-user-agent\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"panelIndex\":\"5\",\"gridData\":{\"x\":0,\"y\":0,\"w\":24,\"h\":20,\"i\":\"5\"},\"id\":\"http-logs-over-time-by-method\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"panelIndex\":\"9\",\"gridData\":{\"x\":24,\"y\":0,\"w\":24,\"h\":15,\"i\":\"9\"},\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"id\":\"meta_system\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"panelIndex\":\"11\",\"gridData\":{\"x\":36,\"y\":30,\"w\":12,\"h\":15,\"i\":\"11\"},\"id\":\"http_status_code\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"panelIndex\":\"12\",\"gridData\":{\"x\":0,\"y\":122,\"w\":24,\"h\":15,\"i\":\"12\"},\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"id\":\"meta_orig_ip\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"panelIndex\":\"13\",\"gridData\":{\"x\":24,\"y\":122,\"w\":24,\"h\":15,\"i\":\"13\"},\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"id\":\"meta_resp_ip\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"panelIndex\":\"14\",\"gridData\":{\"x\":24,\"y\":97,\"w\":12,\"h\":25,\"i\":\"14\"},\"id\":\"conn-top-originating-country\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"panelIndex\":\"15\",\"gridData\":{\"x\":36,\"y\":97,\"w\":12,\"h\":25,\"i\":\"15\"},\"id\":\"conn-top-responding-country\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"panelIndex\":\"16\",\"gridData\":{\"x\":0,\"y\":67,\"w\":48,\"h\":30,\"i\":\"16\"},\"id\":\"http\",\"type\":\"search\",\"version\":\"6.3.0\"},{\"panelIndex\":\"17\",\"gridData\":{\"x\":24,\"y\":15,\"w\":12,\"h\":15,\"i\":\"17\"},\"id\":\"bcb48270-2aaf-11e8-8249-cb755c34d5e4\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"panelIndex\":\"18\",\"gridData\":{\"x\":36,\"y\":15,\"w\":12,\"h\":15,\"i\":\"18\"},\"id\":\"ce2fe990-2aaf-11e8-8249-cb755c34d5e4\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"panelIndex\":\"19\",\"gridData\":{\"x\":0,\"y\":20,\"w\":24,\"h\":23,\"i\":\"19\"},\"version\":\"6.3.0\",\"type\":\"visualization\",\"id\":\"e38f8cf0-7df7-11e8-83e2-21c593b1bbda\",\"embeddableConfig\":{}}]",
+        "panelsJSON": "[{\"panelIndex\":\"1\",\"gridData\":{\"x\":24,\"y\":30,\"w\":12,\"h\":15,\"i\":\"1\"},\"id\":\"http-method\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"panelIndex\":\"2\",\"gridData\":{\"x\":0,\"y\":43,\"w\":24,\"h\":24,\"i\":\"2\"},\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"id\":\"http-top-host-headers\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"panelIndex\":\"3\",\"gridData\":{\"x\":0,\"y\":97,\"w\":24,\"h\":25,\"i\":\"3\"},\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"id\":\"http-top-uri\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"panelIndex\":\"4\",\"gridData\":{\"x\":24,\"y\":45,\"w\":24,\"h\":20,\"i\":\"4\"},\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"id\":\"http-top-user-agent\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"panelIndex\":\"5\",\"gridData\":{\"x\":0,\"y\":0,\"w\":24,\"h\":20,\"i\":\"5\"},\"id\":\"http-logs-over-time-by-method\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"panelIndex\":\"9\",\"gridData\":{\"x\":24,\"y\":0,\"w\":24,\"h\":15,\"i\":\"9\"},\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"id\":\"meta_system\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"panelIndex\":\"11\",\"gridData\":{\"x\":36,\"y\":30,\"w\":12,\"h\":15,\"i\":\"11\"},\"id\":\"http_status_code\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"panelIndex\":\"12\",\"gridData\":{\"x\":0,\"y\":122,\"w\":24,\"h\":15,\"i\":\"12\"},\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"id\":\"meta_orig_ip\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"panelIndex\":\"13\",\"gridData\":{\"x\":24,\"y\":122,\"w\":24,\"h\":15,\"i\":\"13\"},\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"id\":\"meta_resp_ip\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"panelIndex\":\"14\",\"gridData\":{\"x\":24,\"y\":97,\"w\":12,\"h\":25,\"i\":\"14\"},\"id\":\"conn-top-originating-country\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"panelIndex\":\"15\",\"gridData\":{\"x\":36,\"y\":97,\"w\":12,\"h\":25,\"i\":\"15\"},\"id\":\"conn-top-responding-country\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"panelIndex\":\"16\",\"gridData\":{\"x\":0,\"y\":67,\"w\":48,\"h\":30,\"i\":\"16\"},\"id\":\"http\",\"type\":\"search\",\"version\":\"6.3.0\"},{\"panelIndex\":\"17\",\"gridData\":{\"x\":24,\"y\":15,\"w\":12,\"h\":15,\"i\":\"17\"},\"id\":\"bcb48270-2aaf-11e8-8249-cb755c34d5e4\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"panelIndex\":\"18\",\"gridData\":{\"x\":36,\"y\":15,\"w\":12,\"h\":15,\"i\":\"18\"},\"id\":\"ce2fe990-2aaf-11e8-8249-cb755c34d5e4\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"panelIndex\":\"19\",\"gridData\":{\"x\":0,\"y\":20,\"w\":24,\"h\":23,\"i\":\"19\"},\"version\":\"6.3.0\",\"type\":\"visualization\",\"id\":\"e38f8cf0-7df7-11e8-83e2-21c593b1bbda\",\"embeddableConfig\":{}},{\"panelIndex\":\"20\",\"gridData\":{\"x\":0,\"y\":137,\"w\":24,\"h\":15,\"i\":\"20\"},\"version\":\"6.3.0\",\"type\":\"visualization\",\"id\":\"eb5a8e50-901a-11e8-b8d6-e73eae5963f1\",\"embeddableConfig\":{}},{\"gridData\":{\"w\":24,\"h\":15,\"x\":24,\"y\":137,\"i\":\"21\"},\"version\":\"6.3.0\",\"panelIndex\":\"21\",\"type\":\"visualization\",\"id\":\"fb1b2610-901a-11e8-b8d6-e73eae5963f1\",\"embeddableConfig\":{}}]",
         "optionsJSON": "{\"darkTheme\":false,\"useMargins\":false}",
         "version": 1,
         "timeRestore": false,

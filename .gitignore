@@ -2,3 +2,4 @@
 .vscode/
 extract_files
 pcap
+bro/bro_config/output.bro

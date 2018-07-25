@@ -16,4 +16,3 @@ sleep 1
 cd /kibana-dashboards
 ./export-all.sh kibana
 ./backup-template.sh -i bro -l elasticsearch
-./backup-template.sh -i suricata -l elasticsearch

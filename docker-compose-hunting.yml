@@ -48,42 +48,50 @@ services:
        - clamav-log:/var/log/clamav
 
   sophos:
+    image: tatsui/sophos
     build: ./antivirus/sophos
     volumes:
        - ./extract_files:/malware:ro
 
   escan:
+    image: tatsui/escan
     build: ./antivirus/escan
     volumes:
        - ./extract_files:/malware:ro
   avg:
+    image: tatsui/avg
     build: ./antivirus/avg
     volumes:
        - ./extract_files:/malware:ro
 
   avast:
+    image: tatsui/avast
     build: ./antivirus/avast
     volumes:
        - ./extract_files:/malware:ro
 
   comodo:
+    image: tatsui/comodo
     build: ./antivirus/comodo
     volumes:
        - ./extract_files:/malware:ro
 
 
   fsecure:
+    image: tatsui/fsecure
     build: ./antivirus/fsecure
     volumes:
        - ./extract_files:/malware:ro
 
   fport:
+    image: tatsui/fport
     build: ./antivirus/fport
     volumes:
        - ./extract_files:/malware:ro
 
 
   windows-defender:
+    image: tatsui/windows-defender
     build: ./antivirus/windows-defender
     volumes:
        - ./extract_files:/malware:ro

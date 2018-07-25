@@ -15,7 +15,6 @@
 ./export-dashboard.sh $1 "971a5150-26c4-11e8-917c-bbb0e17070d1" dns
 ./export-dashboard.sh $1 "e87ed880-26c5-11e8-917c-bbb0e17070d1" socks
 ./export-dashboard.sh $1 "cb3838c0-2a80-11e8-917c-bbb0e17070d1" sip
-./export-dashboard.sh $1 "ce946b30-2ac4-11e8-8249-cb755c34d5e4" suricata
 ./export-dashboard.sh $1 "f5b5d4a0-26c4-11e8-917c-bbb0e17070d1" log_types
 ./export-dashboard.sh $1 "b7ea9610-26c4-11e8-917c-bbb0e17070d1" files
 ./export-dashboard.sh $1 "35fc2500-2f7b-11e8-b278-b34d48535b60" tunnel
