@@ -28,7 +28,7 @@ services:
     image: tatsui/yara-gen
     build: yara-gen
     volumes:
-       - ./extract_files:/malware
+       - ./malware:/malware
 
   yara:
     image: tatsui/yara
